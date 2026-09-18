@@ -19,5 +19,14 @@ export default function App(){
     };
 
     return(
+        <SafeAreaProvider>
+            <SafeAreaView>
+                <Header/>
+            </SafeAreaView>
+        </SafeAreaProvider>
+     
     )
-}
+};
+
+const styles = {
+};
