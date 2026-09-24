@@ -1,0 +1,18 @@
+
+Como funciona os styles
+
+const styles = StyleSheet.create({
+    container:{
+        height: '100%',
+        backgroundColor: 'purple',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    texto:{
+        color: 'white',
+    },
+});
+
+componente = StatusBar --> Letras maiúsculas
+método = MetodoAssim() --> Letras maiúsculas, mesma ideia dos componentes porém recebe um parênteses no final
+props = ideiaProp --> Letra minúscula para começar, de resto uso camelCase

@@ -7,27 +7,25 @@ import { WaterProgress } from './src/components/WaterProgress';
 import { ActionButtons } from './src/components/ActionButtons';
 
 export default function App(){
-    const GOAL = 2000;
-    const [consumed, setConsumed] = useState(0);
+    // const GOAL = 2000;
+    // const [consumed, setConsumed] = useState(0);
 
-    const handleAddWater = (amount) =>{
+    // const handleAddWater = (amount) =>{
 
-    };
+    // };
 
-    const handleReset = () => {
+    // const handleReset = () => {
 
-    };
+    // };
 
     return(
         <SafeAreaProvider>
             <SafeAreaView>
-                <StatusBar barStyle={'light-content'} backgroundColor={'purple'}>
                     <View style={styles.container}>
                         <Text>
-
+                            <Header/>
                         </Text>
                     </View>
-                </StatusBar>
             </SafeAreaView>
         </SafeAreaProvider>
      
@@ -36,9 +34,11 @@ export default function App(){
 
 const styles = StyleSheet.create({
     container:{
-        backgroundColor: 'purple',
+        marginTop:'10%',
         justifyContent: 'center',
         alignItems: 'center',
-        flex: 1,
     },
 });
+
+
+
