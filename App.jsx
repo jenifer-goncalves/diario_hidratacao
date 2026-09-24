@@ -25,7 +25,7 @@ export default function App(){
                     <View>
                         <Text>
                             <Header GOAL={GOAL} />
-                            <WaterProgress />
+                            <WaterProgress consumed={1000} goal={GOAL}/>
                         </Text>
                     </View>
             </SafeAreaView>
