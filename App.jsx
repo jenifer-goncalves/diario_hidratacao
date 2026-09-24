@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { StyleSheet, View, StatusBar } from 'react-native';
+import { StatusBar, StyleSheet, View, Text} from 'react-native';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import { COLORS } from './src/constants/colors';
 import { Header } from './src/components/Header';
@@ -21,12 +21,24 @@ export default function App(){
     return(
         <SafeAreaProvider>
             <SafeAreaView>
-                <Header/>
+                <StatusBar barStyle={'light-content'} backgroundColor={'purple'}>
+                    <View style={styles.container}>
+                        <Text>
+
+                        </Text>
+                    </View>
+                </StatusBar>
             </SafeAreaView>
         </SafeAreaProvider>
      
     )
 };
 
-const styles = {
-};
+const styles = StyleSheet.create({
+    container:{
+        backgroundColor: 'purple',
+        justifyContent: 'center',
+        alignItems: 'center',
+        flex: 1,
+    },
+});
