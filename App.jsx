@@ -24,7 +24,8 @@ export default function App(){
             <SafeAreaView>
                     <View>
                         <Text>
-                            <Header GOAL={GOAL}/>
+                            <Header GOAL={GOAL} />
+                            <WaterProgress />
                         </Text>
                     </View>
             </SafeAreaView>
