@@ -18,12 +18,13 @@ export default function App(){
 
     // };
 
+    const GOAL = 2000;
     return(
         <SafeAreaProvider>
             <SafeAreaView>
-                    <View style={styles.container}>
+                    <View>
                         <Text>
-                            <Header/>
+                            <Header GOAL={GOAL}/>
                         </Text>
                     </View>
             </SafeAreaView>
@@ -32,13 +33,8 @@ export default function App(){
     )
 };
 
-const styles = StyleSheet.create({
-    container:{
-        marginTop:'10%',
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-});
+
+
 
 
 
