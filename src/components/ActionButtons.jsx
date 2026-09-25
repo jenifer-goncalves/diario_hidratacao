@@ -1,4 +1,4 @@
-import { View, Text, Button, StyleSheet } from "react-native";
+import { View, Text, Pressable, StyleSheet } from "react-native";
 
 export function ActionButtons(){
     return(
