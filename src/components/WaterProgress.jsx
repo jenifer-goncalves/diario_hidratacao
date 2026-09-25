@@ -1,17 +1,17 @@
 import { View, Text, StyleSheet } from "react-native";
 import { COLORS } from "../constants/colors";
 
-export function WaterProgress( {consumed = 2500, GOAL = 2000}){
+export function WaterProgress( {consumed = 1000, GOAL = 2000}){
 
-const porcentagem = Math.min(Math.round((consumed / GOAL) * 100),100)
+const porcentagem = Math.min(Math.round((consumed / GOAL) * 100), 100);
 
 
     return(
-        <View>
-            <Text> Total consumido: {consumed}ml </Text>
-            <Text> Você atingiu {porcentagem}% da meta diária.</Text>
+        <View style={styles.card}>
+            <Text style={styles.consumedText}> Total consumido: {consumed}ml </Text>
+            <Text style={styles.percentageText}> Você atingiu {porcentagem}% da meta diária.</Text>
             <View style={styles.progressBarBackground}>
-                <View style={[styles.progressBarFill, { width: `${porcentagem}%` }]}></View>
+                <View style={[styles.progressBarFill, { width: `${porcentagem}%` }]} />
             </View>
         </View>
     )
