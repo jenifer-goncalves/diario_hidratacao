@@ -12,12 +12,12 @@ export default function App(){
     const GOAL = 2000;
     const [consumed, setConsumed] = useState(0)
 
-    const handleAddWater = (amount) => {
-        consumed = onAdd()
+    const handleAddWater = (valor) => {
+        setConsumed((consumed) => consumed + valor)
     };
 
     const handleReset = () =>{
-        setConsumed = onReset()
+        setConsumed(0)
     };
 
     return(
@@ -27,8 +27,8 @@ export default function App(){
 
                         <View style={styles.content}>
                             <Header GOAL={GOAL} />
-                            <WaterProgress consumed={1000} goal={GOAL}/>
-                            <ActionButtons/>
+                            <WaterProgress consumed={consumed} goal={GOAL}/>
+                            <ActionButtons onAdd={handleAddWater} onReset={handleReset}/>
                         </View>
                    
             </SafeAreaView>
