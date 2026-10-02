@@ -8,6 +8,10 @@ export function ActionButtons( {onAdd, onReset} ){
             <Text style={styles.label}>Adicionar consumo:</Text>
 
             <View style={styles.buttonRow}>
+                <Pressable style={styles.button} onPress={() => onAdd(100)}>
+                    <Text style={styles.buttonText}>+100ml</Text>
+                </Pressable>
+
                 <Pressable style={styles.button} onPress={() => onAdd(200)}>
                     <Text style={styles.buttonText}>+200ml</Text>
                 </Pressable>

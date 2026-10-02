@@ -5,20 +5,33 @@ import { COLORS } from './src/constants/colors';
 import { Header } from './src/components/Header';
 import { WaterProgress, GOAL } from './src/components/WaterProgress';
 import { ActionButtons } from './src/components/ActionButtons';
+import { DailyGoal } from './src/components/DailyGoal';
+import { Message } from './src/components/Message';
 
 export default function App(){
    
 
     const GOAL = 2000;
     const [consumed, setConsumed] = useState(0)
+    const [used, setUsed] = useState(GOAL)
+
+    const handleAdd = (ml) => {
+        setUsed((prev) => prev + ml)
+    }
+
+    const handleRemove = (ml) => {
+        setUsed((prev) => prev - ml)
+    }
 
     const handleAddWater = (valor) => {
-        setConsumed((consumed) => consumed + valor)
+        setConsumed((prev) => prev + valor)
     };
 
     const handleReset = () =>{
         setConsumed(0)
     };
+
+
 
     return(
         <SafeAreaProvider>
@@ -27,8 +40,10 @@ export default function App(){
 
                         <View style={styles.content}>
                             <Header GOAL={GOAL} />
+                            <DailyGoal consumed={used} onAddc={handleAdd} onRemove={handleRemove}/>
                             <WaterProgress consumed={consumed} goal={GOAL}/>
                             <ActionButtons onAdd={handleAddWater} onReset={handleReset}/>
+                            <Message/>
                         </View>
                    
             </SafeAreaView>
