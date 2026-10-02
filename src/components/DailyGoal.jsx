@@ -1,7 +1,7 @@
 import { View, Text, Pressable, StyleSheet } from "react-native";
 import { COLORS } from "../constants/colors";
 
-export function DailyGoal( {used = 200, onAddc, onRemove} ){
+export function DailyGoal( {used = 2000, onAddc, onRemove} ){
 
     return(
         <View style={styles.container}>
@@ -9,13 +9,13 @@ export function DailyGoal( {used = 200, onAddc, onRemove} ){
 
             <View style={styles.buttonRow}>
                 <Pressable style={styles.button} onPress={() => onRemove(250)}>
-                    <Text>-250ml</Text>
+                    <Text  style={styles.buttonText}>-250ml</Text>
                 </Pressable>
 
-               <Text style={styles.text}>{used}</Text>
+               <Text style={styles.text}>{used} ml</Text>
 
                 <Pressable style={styles.button} onPress={() => onAddc(250)}>
-                    <Text>+250ml</Text>
+                    <Text  style={styles.buttonText}>+250ml</Text>
                 </Pressable>
             </View>
 
