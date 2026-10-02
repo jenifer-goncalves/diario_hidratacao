@@ -10,12 +10,22 @@ export default function App(){
    
 
     const GOAL = 2000;
+    const [consumed, setConsumed] = useState(0)
+
+    const handleAddWater = (amount) => {
+        consumed = onAdd()
+    };
+
+    const handleReset = () =>{
+        setConsumed = onReset()
+    };
+
     return(
         <SafeAreaProvider>
-            <SafeAreaView>
+            <SafeAreaView style={styles.container}>
                     <StatusBar barStyle="auto"/>
 
-                        <View>
+                        <View style={styles.content}>
                             <Header GOAL={GOAL} />
                             <WaterProgress consumed={1000} goal={GOAL}/>
                             <ActionButtons/>
